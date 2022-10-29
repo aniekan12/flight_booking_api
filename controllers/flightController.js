@@ -14,7 +14,7 @@ exports.bookFlight = async (req, res) => {
         
         Flights.push(newFlight);
 
-        res.status(200).json({
+        res.status(201).json({
             status: true,
             message:'flight booked successfully',
             data: {
@@ -25,6 +25,19 @@ exports.bookFlight = async (req, res) => {
                 date,
             }
         })
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
+
+exports.getAllFlights = async (req, res) => {
+    try {
+        const flights  = Flights;
+        res.status(200).json({
+            status: true,
+            message:'flights retrieved successfully',
+            data: flights,
+        });
     } catch (error) {
         res.status(500).json({ message: error.message });
     }

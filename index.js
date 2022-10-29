@@ -9,6 +9,8 @@ app.use(json());
 
 app.use("/", routes);
 app.use('/book_flight',routes);
+app.use('/get_all_flights',routes);
+
 
 const port = process.env.PORT || 3000;
 
