@@ -1,10 +1,15 @@
 const express = require('express');
 
 const router = express.Router();
-const controller = require('../controllers/flightController');
+const bookFlightscontroller = require('../controllers/bookFlightController');
+const getFlightscontroller = require('../controllers/getFlightsController');
+const updateFlightscontroller = require('../controllers/updateFlightsController');
 
-router.post('/', controller.bookFlight)
-.get('/', controller.getAllFlights);
+
+
+router.post('/', bookFlightscontroller.bookFlight)
+.get('/', getFlightscontroller.getAllFlights)
+.get('/:id',getFlightscontroller.getSingleFlight);
 
 module.exports = router;
 
