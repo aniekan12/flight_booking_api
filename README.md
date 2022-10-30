@@ -1,7 +1,7 @@
 # flight_booking_api
 flight booking api built with node.js and express.js 🎉
 
-## Getting Started
+## Getting Started 🎉
 
 ### clone the project
 ```
@@ -33,6 +33,21 @@ sample request 👇🏿
     "time":"3PM",
     "price":26000,
     "date":"26-09-2022"
+}
+```
+
+sample response 👇🏿
+```
+{
+    "status": "success",
+    "message": "flight booked successfully",
+    "data": {
+        "id": 1,
+        "title": "flight to naij",
+        "time": "3PM",
+        "price": 26000,
+        "date": "26-09-2022"
+    }
 }
 ```
 
